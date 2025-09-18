@@ -5,7 +5,15 @@
         <title><?php bloginfo('name'); ?></title>
         <?php wp_head(); ?>
     </head>
-    <body>
+    <body <? body_class() ?>>
+        <?php 
+            if (function_exists('wp_body_open')){
+                wp_body_open();
+            }
+        ?>
+        <div id="page" class="site">
         <header>
+            <?php get_template_part(); ?>
             <h1><?php bloginfo('name'); ?></h1>
         </header>
+        <div id="content" class="site-content"></div>

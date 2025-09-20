@@ -3,7 +3,11 @@
  * Theme Functions
  * @package Aquila
  */
+if(!defined('AQUILA_DIR_PATH')){
+    define('AQUILA_DIR_PATH', untrailingslashit(get_template_directory()));
+}
 
+require_once AQUILA_DIR_PATH . '/inc/helpers/autoloader.php';
 function aquila_enqueue_scripts () {
     // wp_enqueue_style('stylesheet', get_stylesheet_uri(), [], filemtime(get_template_directory().'/style.css'), 'all');
     

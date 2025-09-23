@@ -42,7 +42,7 @@ function autoloader( $resource = '' ) {
 
 	$directory = '';
 	$file_name = '';
-
+	//print_r($path);
 	if ( 'inc' === $path[0] ) {
 
 		switch ( $path[1] ) {

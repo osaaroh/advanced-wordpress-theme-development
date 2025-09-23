@@ -70,18 +70,20 @@ trait Singleton {
 		 * for each sub-class.
 		 */
 		$called_class = get_called_class();
+		print_r($called_class.'####@@@@ENDRRR');
 
 		if ( ! isset( $instance[ $called_class ] ) ) {
 
 			$instance[ $called_class ] = new $called_class();
 
 			/**
-			 * Dependent items can use the `aquila_theme_singleton_init_{$called_class}` hook to execute code
+			 * Dependent items can use the `aquila_theme_singleton_init_{$called_class}` hook to execute code WDTCD???
 			 */
 			do_action( sprintf( 'aquila_theme_singleton_init_%s', $called_class ) ); // phpcs:ignore WordPress.NamingConventions.ValidHookName.UseUnderscores
 
 		}
-
+		print_r($instance);
+		print_r($instance[$called_class]);
 		return $instance[ $called_class ];
 
 	}

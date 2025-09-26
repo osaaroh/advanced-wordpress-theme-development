@@ -1,6 +1,6 @@
 <?php
 /**
- * Main Template File
+ * Front page Template File
  * 
  * @package: Aquila
  * 
@@ -22,7 +22,7 @@
     <?php else : ?>
         <p>Sorry, no content found! This is the </p>
     <?php endif; ?>
-<h3>This is the Index.php file</h3>
+<h3>This is the page.php file</h3>
 </main>
 <?php //get_sidebar(); ?> <!--Include the sidebar -->
 <? get_footer(); ?>

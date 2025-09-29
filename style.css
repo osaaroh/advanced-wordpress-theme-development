@@ -10,3 +10,8 @@ body {
     background: #f0f0f0;
     font-family: Arial;
 }
+
+img{
+    width: 100%;
+    height: auto;
+}

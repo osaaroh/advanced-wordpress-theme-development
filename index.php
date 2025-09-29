@@ -12,7 +12,7 @@
 
 <div id="primary">
 <main id="main" class="site-main mt-5" role='main'>
-    <?php if (have_posts()) {?>
+    <?php if (have_posts()) :?>
         <div class="container">
             <?php
             //check if page is blog home and not Front page.
@@ -38,10 +38,8 @@
                     ?>
                     <div class="col-lg-4 col-md-6 col-sm-12">
                     <?php
-                }?>
-                <h3><?php the_title(); ?></h3>
-                <div><?php the_excerpt(); ?></div>
-                <?php
+                }
+                get_template_part('template-parts/content');
                 $index++;
                 if (0 !== $index && 0 === $index % $no_of_columns) {
                     ?>
@@ -53,7 +51,12 @@
             </div>
             
         </div>
-        <?php } ?>
+        <?php 
+        else :
+            get_template_part('template-parts/content-none');
+        endif;
+        get_template_part('template-parts/content-none');
+        ?>
 <h3>This is the Index.php file</h3>
 </main>
 </div>

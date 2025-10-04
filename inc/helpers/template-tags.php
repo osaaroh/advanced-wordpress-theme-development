@@ -17,10 +17,9 @@ function get_the_post_custom_thumbnail($post_id, $size='featured-thumbnail', $ad
             get_post_thumbnail_id($post_id),
             $size,
             false,
-            $additional_attributes
+            $attributes
         );
     }
-
 return $custom_thumbnail;
 }
 

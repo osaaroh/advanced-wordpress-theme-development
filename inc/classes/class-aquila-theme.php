@@ -16,9 +16,10 @@ class AQUILA_THEME {
 	{
 
 
-		//load class. Get instance func does something like 'new Assets()'
+		//load class. All class instances are loaded here Get instance func does something like 'new Assets()'
 		Assets::get_instance();
 		Menus::get_instance();
+		Meta_Boxes::get_instance();
 
 		$this->setup_hooks();
 	}

@@ -32,5 +32,12 @@
             aquila_the_excerpt(150);
             echo aquila_excerpt_more();
         }
+
+        wp_link_pages(
+            [
+                'before' => '<div class="page-links">'. esc_html__('Pages:', 'aquila'),
+                'after' => '</div>',
+            ]
+        )
     ?>
 </div>

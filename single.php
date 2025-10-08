@@ -1,6 +1,6 @@
 <?php
 /**
- * Front page Template File
+ * Single Template File
  * 
  * @package: Aquila
  * 
@@ -10,19 +10,40 @@
 
 <?php get_header(); ?>
 
-<main>
-    <?php if (have_posts()) : ?>
-        <?php while (have_posts()): the_post(); ?>
-            <article>
-                <h2><a href="<?php the_permalink()?>"><?php the_title(); ?></a></h2>
-                <?php the_excerpt(); ?>
-            </article>
-        <?php endwhile; ?>
+<div id="primary">
+<main id="main" class="site-main mt-5" role='main'>
+    <?php if (have_posts()) :?>
+        <div class="container">
+            <?php
+            //check if page is blog home and not Front page.
+            if(is_home() && !is_front_page()){
+                ?>
+                <header class="mb-5">
+                    <h1 class="page-title screen-reader-text">
+                        <?php single_post_title() ?>
+                    </h1>
+                </header>
+                <?php
+            }
 
-    <?php else : ?>
-        <p>Sorry, no content found! This is the </p>
-    <?php endif; ?>
+            while (have_posts()) : the_post();
+
+            get_template_part('template-parts/content');
+
+        endwhile;
+            ?>
+
+            
+        </div>
+        <?php 
+        else :
+            get_template_part('template-parts/content-none');
+        endif;
+        //Module below for test
+        //get_template_part('template-parts/content-none');
+        ?>
 <h3>This is the Single.php file</h3>
 </main>
+</div>
 <?php //get_sidebar(); ?> <!--Include the sidebar -->
-<? get_footer(); ?>
+<?php get_footer(); ?>

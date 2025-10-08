@@ -16,6 +16,6 @@
             <?php get_template_part('template-parts/header/nav'); ?>
             <?php //get_template_part('template-parts/content', 'post'); ?>
             
-            <h1><?php bloginfo('name'); ?></h1>
+            <h1><?php //bloginfo('name'); ?></h1>
         </header>
         <div id="content" class="site-content"></div>

@@ -47,11 +47,7 @@ class Menus {
 
 			//Get object id by location
 			$menu_id = $locations[$location];
-
-
-
 			return ! empty($menu_id) ? $menu_id : '';
-
 		}
 
 		public function get_child_menu_items($menu_array, $parent_id){

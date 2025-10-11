@@ -39,9 +39,17 @@
         else :
             get_template_part('template-parts/content-none');
         endif;
+        // aquila_pagination();
         //Module below for test
         //get_template_part('template-parts/content-none');
         ?>
+
+        <div class="container">
+            <?php
+                previous_post_link();
+                next_post_link();
+            ?>
+        </div>
 <h3>This is the Single.php file</h3>
 </main>
 </div>

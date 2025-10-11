@@ -55,7 +55,8 @@
         else :
             get_template_part('template-parts/content-none');
         endif;
-        get_template_part('template-parts/content-none');
+        aquila_pagination();
+        //get_template_part('template-parts/content-none');
         ?>
 <h3>This is the Index.php file</h3>
 </main>

@@ -97,3 +97,8 @@ function aquila_excerpt_more ($more = ''){
 
     return $more;
 }
+
+function aquila_pagination(){
+    previous_post_link();
+    next_post_link();
+}

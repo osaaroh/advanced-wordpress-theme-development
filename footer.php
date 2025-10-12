@@ -1,5 +1,15 @@
 <footer>
     <p><?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
+    <?php
+    if(is_active_sidebar('sidebar-2')){
+        ?>
+        <aside>
+            <?php dynamic_sidebar('sidebar-2'); ?>
+        </aside>
+        <?php
+    }
+
+    ?>
 </footer>
 <?php wp_footer(); ?>
 </body>

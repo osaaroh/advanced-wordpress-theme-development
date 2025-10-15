@@ -44,7 +44,7 @@ class Assets {
 	public function register_scripts(){
 		//You can use either enqueue only, and you can register 1st before enqueueing
 
-		wp_enqueue_script('main-js', AQUILA_DIR_URI.'/assets/main.js', [], filemtime(get_template_directory().'/assets/main.js'), true);
+		wp_enqueue_script('main-js', AQUILA_DIR_URI.'/assets/main.js', ['jquery'], filemtime(get_template_directory().'/assets/main.js'), true);
 
 		wp_register_script('bootstrap-js', AQUILA_DIR_URI.'/assets/src/library/js/bootstrap.bundle.min.js', ['jquery'], false, true);
 

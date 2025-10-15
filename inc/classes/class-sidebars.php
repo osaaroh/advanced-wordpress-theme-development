@@ -24,6 +24,9 @@ class Sidebars {
 	protected function setup_hooks(){
 		//actions and filters
 		add_action('widgets_init', [$this, 'register_sidebars']);
+
+		//action for widget
+		add_action('widgets_init', [$this, 'register_clock_widget']);
 	}
 
 	public function register_sidebars() {
@@ -34,7 +37,7 @@ class Sidebars {
 					'description' => __('Main sidebar', 'aquila'),
 					'before_widget' => '<div id="%1$s" class="widget widget-sidebar %2$s">',
 					'after_widget' => '</div>',
-					'before_title' => '<h3 class="widget-title"',
+					'before_title' => '<h3 class="widget-title">',
 					'after_title' => '</h3>'
 				));
 			register_sidebar(
@@ -44,9 +47,13 @@ class Sidebars {
 					'description' => __('Footer sidebar', 'aquila'),
 					'before_widget' => '<div id="%1$s" class="widget widget-footer cell column %2$s">',
 					'after_widget' => '</div>',
-					'before_title' => '<h3 class="widget-title"',
+					'before_title' => '<h3 class="widget-title">',
 					'after_title' => '</h3>'
 				));
+		}
+
+		public function register_clock_widget() {
+			register_widget('AQUILA_THEME\Inc\Clock_Widget');
 		}
 
 	}

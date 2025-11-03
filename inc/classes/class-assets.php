@@ -44,7 +44,10 @@ class Assets {
 	public function register_scripts(){
 		//You can use either enqueue only, and you can register 1st before enqueueing
 
-		wp_enqueue_script('main-js', AQUILA_DIR_URI.'/assets/main.js', ['jquery'], filemtime(get_template_directory().'/assets/main.js'), true);
+		wp_enqueue_script('main-js', AQUILA_DIR_URI.'/assets/src/js/main.js', ['jquery'], filemtime(get_template_directory().'/assets/src/js/main.js'), true);
+
+		// Switch to main.js build version
+		// wp_enqueue_script('main-js', AQUILA_BUILD_JS_URI.'/main.js', ['jquery'], filemtime(AQUILA_BUILD_JS_DIR_PATH.'/main.js'), true);
 
 		wp_register_script('bootstrap-js', AQUILA_DIR_URI.'/assets/src/library/js/bootstrap.bundle.min.js', ['jquery'], false, true);
 

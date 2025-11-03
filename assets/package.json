@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prod": "cross-env NODE_ENV=production webpack --mode production --progress",
+    "dev": "cross-env NODE_ENV=development webpack --watch --mode development --progress",
+    "clean": "rm -rf build/*"
   },
-  "keywords": [],
+  "keywords": [
+    "wordpress",
+    "themes"
+  ],
   "author": "",
   "license": "MIT",
   "description": "Aquila theme packages",
@@ -27,5 +32,8 @@
     "terser-webpack-plugin": "^5.3.14",
     "webpack": "^5.102.1",
     "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^4.0.0"
   }
 }

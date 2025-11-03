@@ -1,10 +1,17 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const loader = require('mini-css-extract-plugin/types/loader');
-const { publicDecrypt } = require('crypto');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const OptimizeCssAssetsPlugin = require('css-minimizer-webpack-plugin')
+const cssnano = require('cssnano');
 
-const JS_DIR = path.resolve(__dirname, '/src/js');
-const IMG_DIR = path.resolve(__dirname, '/src/img');
+//Changed UglifyJSPlugin to TerserPlugin
+const TerserPlugin = require('terser-webpack-plugin')
+
+// const loader = require('mini-css-extract-plugin/types/loader');
+// const { publicDecrypt } = require('crypto');
+
+const JS_DIR = path.resolve(__dirname, 'src/js');
+const IMG_DIR = path.resolve(__dirname, 'src/img');
 const BUILD_DIR = path.resolve(__dirname, 'build');
 
 const entry = {
@@ -42,11 +49,36 @@ const rules = [
     },
 ]
 
+const plugins = (argv) =>[
+    new CleanWebpackPlugin(
+        {
+            cleanStaleWebpackAssets: ('production'===argv.mode)
+        }
+    ),
+
+    new MiniCssExtractPlugin({
+        filename: 'css/[name].css'
+    })
+]
+
 module.exports = (env, argv) => ({
     entry: entry,
     output: output,
     devtool: 'source-map',
     module:  {
         rules: rules,
+    },
+    optimization: {
+        minimizer: [
+            new OptimizeCssAssetsPlugin({
+            }),
+            new TerserPlugin({
+                parallel: true,
+            })
+        ]
+    },
+    plugins: plugins(argv),
+    externals: {
+        jquery: 'jQuery'
     }
 })

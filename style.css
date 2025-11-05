@@ -8,7 +8,7 @@ Version 1.0
 
 body {
     background: #f0f0f0;
-    font-family: Arial;
+    font-family: 'Lato' !important;
 }
 
 img{

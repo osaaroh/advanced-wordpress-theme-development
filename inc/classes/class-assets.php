@@ -36,9 +36,13 @@ class Assets {
 
 		wp_register_style('bootstrap-css', AQUILA_DIR_URI.'/assets/src/library/css/bootstrap.min.css', [], false, 'all');
 
+		wp_register_style('main', AQUILA_BUILD_CSS_URI.'/main.css', ['bootstrap-css'], filemtime(AQUILA_BUILD_CSS_DIR_PATH.'/main.css'), 'all');
+
+
 		//Enqueue Styles
-		wp_enqueue_style('style-css');
 		wp_enqueue_style('bootstrap-css');
+		wp_enqueue_style('style-css');
+		wp_enqueue_style('main');
 		wp_enqueue_style('fonts', get_template_directory_uri().'/assets/src/library/fonts/fonts.css', [], false, 'all');
 
 	}

@@ -31,9 +31,13 @@ const rules = [
         use: 'babel-loader'
     },
     {
-        test: /\.scss$/,
+        test: /\.s[ac]ss$/,
         exclude: /node_modules/,
-        use: [MiniCssExtractPlugin.loader,'css-loader']
+        use: [
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+            'sass-loader'
+        ]
     },
     {
         test: /\.(png|jpg|svg|jpeg|gif|ico)$/,

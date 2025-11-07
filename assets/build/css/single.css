@@ -1,0 +1,115 @@
+/*!*******************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/library/fonts/fonts.css ***!
+  \*******************************************************************************/
+/* lato-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../f76bb48a21e6a06b37f0.eot); /* IE9 Compat Modes */
+  src: url(../f76bb48a21e6a06b37f0.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
+       url(../dc76fa21c09d3cec2243.woff2) format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url(../205544e89f4d1d47d849.woff) format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+       url(../f00fd9f76f8b8ac0d2bb.ttf) format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+       url(../12ce8ee331c92b0b2882.svg#Lato) format('svg'); /* Legacy iOS */
+}
+/* lato-300italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 300;
+  src: url(../c23cc98d61e5c4ca089e.eot); /* IE9 Compat Modes */
+  src: url(../c23cc98d61e5c4ca089e.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
+       url(../d57198714da54c418855.woff2) format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url(../5eea02ef4381f4609043.woff) format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+       url(../a2cda7f6cac1343e34d8.ttf) format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+       url(../6b233c12b17f1a58735b.svg#Lato) format('svg'); /* Legacy iOS */
+}
+/* lato-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../280b6b4991a4c5157d14.eot); /* IE9 Compat Modes */
+  src: url(../280b6b4991a4c5157d14.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
+       url(../be36596da218e1eec01c.woff2) format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url(../292725486219768e6225.woff) format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+       url(../cf2315b218ab9f01217d.ttf) format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+       url(../55138b85aa03df8eb91a.svg#Lato) format('svg'); /* Legacy iOS */
+}
+/* lato-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 400;
+  src: url(../51179236b63dc87c67fe.eot); /* IE9 Compat Modes */
+  src: url(../51179236b63dc87c67fe.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
+       url(../516d382b3da7e145024b.woff2) format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url(../51e6797228a4eea81ade.woff) format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+       url(../f8f72b63d20ee6d95bf1.ttf) format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+       url(../0b08074189da99d51484.svg#Lato) format('svg'); /* Legacy iOS */
+}
+/* lato-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../0e39f8fd1733e81ab05d.eot); /* IE9 Compat Modes */
+  src: url(../0e39f8fd1733e81ab05d.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
+       url(../8f28e0e1fdb195149f1c.woff2) format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url(../5cd24624b77e9c2f6555.woff) format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+       url(../c94e49f689e148931a36.ttf) format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+       url(../2e40930a384396c5298f.svg#Lato) format('svg'); /* Legacy iOS */
+}
+/* lato-700italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 700;
+  src: url(../53cf99f19df423ffb866.eot); /* IE9 Compat Modes */
+  src: url(../53cf99f19df423ffb866.eot?#iefix) format('embedded-opentype'), /* IE6-IE8 */
+       url(../21fd3e9e128dfaa1e161.woff2) format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+       url(../0afec16e817976091a58.woff) format('woff'), /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+, iOS 5+ */
+       url(../844eed9c1177a98ae878.ttf) format('truetype'), /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+       url(../da6b33652385e460b7e0.svg#Lato) format('svg'); /* Legacy iOS */
+}
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/single.scss ***!
+  \***************************************************************************************************************/
+/*---------------------------------
+		Colors Variables
+-----------------------------------*/
+/*---------------------------------
+		Colors Variables
+-----------------------------------*/
+/*---------------------------------
+		Opacity
+-----------------------------------*/
+/*---------------------------------
+		Gradient
+-----------------------------------*/
+/*---------------------------------
+		Element Colors
+-----------------------------------*/
+/*---------------------------------
+		Border Colors
+-----------------------------------*/
+/*----------------
+		Font
+------------------*/
+/*---------------------------------
+		Body Text Font Sizes
+-----------------------------------*/
+/**
+ * Add font scale with media query as per configuration on $body-text
+ * Ex: @include body-text( h1 );
+ * This will add font-size and line-height with different breakpoints.
+ */
+
+/*# sourceMappingURL=single.css.map*/

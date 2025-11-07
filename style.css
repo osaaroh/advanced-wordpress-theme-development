@@ -8,26 +8,5 @@ Version 1.0
 
 body {
     background: #f0f0f0;
-    font-family: 'Lato' !important;
-}
-
-img{
-    width: 100%;
-    height: auto;
-}
-
-.updated:not(.published){
-    display: none;
-}
-
-/* Nav item  */
-.nav-item:hover .dropdown-menu:not(.show){
-    display: block;
-}
-
-/* Pagination */
-.page-numbers.current > span 
-{
-    background-color: gray;
-    color: #fff;
+    font-family: 'Lato';
 }

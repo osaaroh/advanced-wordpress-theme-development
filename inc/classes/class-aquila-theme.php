@@ -75,6 +75,9 @@ class AQUILA_THEME {
 			//Know what these do
 			add_theme_support('align-wide');
 
+			//Remove core block patterns - Patterns that come with the default wordpress themes
+			remove_theme_support('core-block-patterns');
+
 			global $content_width;
 
 			if(!isset($content_width)){

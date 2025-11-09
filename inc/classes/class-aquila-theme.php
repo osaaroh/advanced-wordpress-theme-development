@@ -21,6 +21,7 @@ class AQUILA_THEME {
 		Menus::get_instance();
 		Meta_Boxes::get_instance();
 		Sidebars::get_instance();
+		Block_Patterns::get_instance();
 
 		$this->setup_hooks();
 	}
@@ -65,7 +66,10 @@ class AQUILA_THEME {
 				'style'
 			] );
 
-			add_editor_style();
+	
+
+			add_theme_support('editor-styles');
+			add_editor_style('assets/build/css/editor.css');
 			add_theme_support('wp-block-styles');
 
 			//Know what these do

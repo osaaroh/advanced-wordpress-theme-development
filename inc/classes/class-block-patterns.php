@@ -26,36 +26,49 @@ class Block_Patterns {
 
     public function register_block_patterns(){
         if (function_exists('register_block_pattern')) {
+
+
+            //Cover Pattern
+            $cover_content = $this->get_pattern_content('template-parts/patterns/cover');
             register_block_pattern(
                 'aquila/cover',
                 [
                     'title'=>__('Aquila Cover', 'aquila'),
-                    'description'=>__('Aquila Cover Block with image and text', 'aquila'),
+                    'description'=>__('Aquila cover with image and text', 'aquila'),
                     'categories' => ['cover'],
-                    'content' => '<!-- wp:cover {"url":"https://my-first-theme.local/wp-content/uploads/2025/11/wallpaperflare.com_wallpaper-2-1024x576.jpg","id":114,"dimRatio":50,"customOverlayColor":"#706f6f","isUserOverlayColor":false,"sizeSlug":"large","layout":{"type":"constrained"}} -->
-<div class="wp-block-cover"><img class="wp-block-cover__image-background wp-image-114 size-large" alt="" src="https://my-first-theme.local/wp-content/uploads/2025/11/wallpaperflare.com_wallpaper-2-1024x576.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim" style="background-color:#706f6f"></span><div class="wp-block-cover__inner-container"><!-- wp:heading {"textAlign":"center","level":1,"fontSize":"large"} -->
-<h1 class="wp-block-heading has-text-align-center has-large-font-size">Never let your  memories be greater than your dreams</h1>
-<!-- /wp:heading -->
+                    'content' => $cover_content,
+                ]
+            );
 
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">A mind that is stretched by a new experience can never go back to its old dimensions</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-<div class="wp-block-buttons"><!-- wp:button {"textAlign":"center","className":"is-style-outline"} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-text-align-center wp-element-button">Blogs</a></div>
-<!-- /wp:button --></div>
-<!-- /wp:buttons --></div></div>
-<!-- /wp:cover -->'
+            //Two Column Pattern
+            $two_columns_content = $this->get_pattern_content('template-parts/patterns/two-columns');
+            register_block_pattern(
+                'aquila/two-columns',
+                [
+                    'title'=>__('Aquila Two Column', 'aquila'),
+                    'description'=>__('Aquila Column Block with heading and text', 'aquila'),
+                    'categories' => ['columns'],
+                    'content' => $two_columns_content,
                 ]
             );
         }
     }
 
+    public function get_pattern_content($template_path){
+            ob_start();
+            get_template_part($template_path);
+
+            $pattern_content = ob_get_contents();
+
+            ob_end_clean();
+
+            return $pattern_content;
+    }
+
     public function register_block_pattern_categories(){
         $pattern_categories = [
             'cover' => __('Cover', 'aquila'),
-            'carousel' => __('Carousel', 'aquila'),
+            'columns' => __('Columns', 'aquila'),
         ];
 
         if (!empty($pattern_categories) && is_array($pattern_categories)) {

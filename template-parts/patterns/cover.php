@@ -4,10 +4,12 @@
  * 
  * @package aquila
  */
+// Didn't need to use variable cover style as it is for only css
+$cover_style = sprintf('background-image:url(%s); min-height:640px', esc_url(AQUILA_BUILD_IMG_URI.'/patterns/cover.jpg'));
 ?>
 
-<!-- wp:cover {"url":"https://my-first-theme.local/wp-content/uploads/2025/11/wallpaperflare.com_wallpaper-2-1024x576.jpg","id":114,"dimRatio":50,"customOverlayColor":"#706f6f","isUserOverlayColor":false,"sizeSlug":"large","layout":{"type":"constrained"}} -->
-<div class="wp-block-cover"><img class="wp-block-cover__image-background wp-image-114 size-large" alt="" src="https://my-first-theme.local/wp-content/uploads/2025/11/wallpaperflare.com_wallpaper-2-1024x576.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim" style="background-color:#706f6f"></span><div class="wp-block-cover__inner-container"><!-- wp:heading {"textAlign":"center","level":1,"fontSize":"large"} -->
+<!-- wp:cover {"url":"https://my-first-theme.local/wp-content/themes/advanced-theme-1/assets/build/src/img/patterns/cover.jpg","id":114,"dimRatio":50,"customOverlayColor":"#706f6f","isUserOverlayColor":false,"minHeight":640,"sizeSlug":"large","metadata":{"categories":["cover"],"patternName":"aquila/cover","name":"Aquila Cover"},"align":"full","className":"has-background-dim aquila-cover","layout":{"type":"constrained"}} -->
+<div class="wp-block-cover alignfull has-background-dim aquila-cover" style="min-height:640px"><img class="wp-block-cover__image-background wp-image-114 size-large" alt="" src="https://my-first-theme.local/wp-content/themes/advanced-theme-1/assets/build/src/img/patterns/cover.jpg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim" style="background-color:#706f6f"></span><div class="wp-block-cover__inner-container"><!-- wp:heading {"textAlign":"center","level":1,"fontSize":"large"} -->
 <h1 class="wp-block-heading has-text-align-center has-large-font-size">Never let your  memories be greater than your dreams</h1>
 <!-- /wp:heading -->
 
